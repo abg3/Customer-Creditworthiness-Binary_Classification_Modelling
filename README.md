@@ -13,7 +13,10 @@ whether a customer is creditworthy or not. To achieve this, we will be comparing
 the following models to select the most accurate model:
 
 • Logistic Regression
+
 • Decision Tree
+
 • Random Forest
+
 • Boosted Model
 
