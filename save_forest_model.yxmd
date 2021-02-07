@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings>
+        <Position x="402" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="estimation pct">70</Value>
+          <Value name="validation pct">30</Value>
+          <Value name="rand seed">1</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Create_Samples.yxmc" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="246" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="Credit-Application-Result" selected="True" />
+            <Field field="Account-Balance" selected="True" />
+            <Field field="Duration-of-Credit-Month" selected="True" />
+            <Field field="Payment-Status-of-Previous-Credit" selected="True" />
+            <Field field="Purpose" selected="True" />
+            <Field field="Credit-Amount" selected="True" />
+            <Field field="Value-Savings-Stocks" selected="True" />
+            <Field field="Length-of-current-employment" selected="True" />
+            <Field field="Instalment-per-cent" selected="True" />
+            <Field field="Most-valuable-available-asset" selected="True" />
+            <Field field="Age-years" selected="True" />
+            <Field field="Type-of-apartment" selected="True" />
+            <Field field="No-of-Credits-at-this-Bank" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Credit-Application-Result" size="16" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="String" />
+            <Field name="Account-Balance" size="12" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="String" />
+            <Field name="Duration-of-Credit-Month" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="Byte" />
+            <Field name="Payment-Status-of-Previous-Credit" size="26" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Purpose" size="12" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="String" />
+            <Field name="Credit-Amount" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="Int16" />
+            <Field name="Value-Savings-Stocks" size="10" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="String" />
+            <Field name="Length-of-current-employment" size="7" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="String" />
+            <Field name="Instalment-per-cent" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="Byte" />
+            <Field name="Most-valuable-available-asset" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="Byte" />
+            <Field name="Age-years" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="Byte" />
+            <Field name="Type-of-apartment" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="Byte" />
+            <Field name="No-of-Credits-at-this-Bank" size="11" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="330" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\AB\AppData\Local\Temp\Engine_11056_aaea9b78d89543ebbe1ccde81d2817d3_\Engine_17820_fd6057a5eb4445f0ac4f23093e379f03_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="222" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>creditworthiness_cleaneddata1.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Credit-Application-Result" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Account-Balance" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Duration-of-Credit-Month" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Payment-Status-of-Previous-Credit" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Purpose" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Credit-Amount" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Value-Savings-Stocks" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Length-of-current-employment" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Instalment-per-cent" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Most-valuable-available-asset" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Age-years" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="Type-of-apartment" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+            <Field name="No-of-Credits-at-this-Bank" size="254" source="File: C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\creditworthiness_cleaneddata1.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings>
+        <Position x="522" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Model Name">Forest_model_Creditworthiness</Value>
+          <Value name="Y Var">Credit-Application-Result</Value>
+          <Value name="X Vars">Account-Balance + Duration-of-Credit-Month + Payment-Status-of-Previous-Credit + Purpose + Credit-Amount + Value-Savings-Stocks + Length-of-current-employment + Instalment-per-cent + Most-valuable-available-asset + Age-years + Type-of-apartment + No-of-Credits-at-this-Bank</Value>
+          <Value name="Num Trees">650</Value>
+          <Value name="Custom Num Vars">False</Value>
+          <Value name="Num Vars">3</Value>
+          <Value name="model.size">False</Value>
+          <Value name="total.nodes">100</Value>
+          <Value name="max.depth">10</Value>
+          <Value name="node.size">2</Value>
+          <Value name="replace">False</Value>
+          <Value name="samp.rate">70</Value>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.50</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+          <Value name="pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Forest_Model.yxmc" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="630" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">C:\Users\AB\Desktop\alteryx project files\Project4_Creditworthiness_classification\creditworthiness\Creditworthiness\forest_model_object</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>forest_model_object</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Estimation" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>save_forest_model</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
